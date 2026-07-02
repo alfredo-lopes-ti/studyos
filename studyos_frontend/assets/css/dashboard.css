@@ -1,0 +1,213 @@
+/* ==========================================================================
+   STUDYOS - ESTILIZAÇÃO DOS COMPONENTES (DASHBOARD.CSS)
+   ========================================================================== */
+
+/* Container que agrupa os itens do checklist */
+.checklist-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md); /* Espaçamento idêntico entre os itens */
+}
+
+/* O item da tarefa (Label) */
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--bg-main); /* Inverte o fundo para destacar o item */
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Feedback visual ao passar o mouse por cima da tarefa */
+.task-item:hover {
+    background-color: var(--bg-card-hover);
+    border-color: var(--accent-primary);
+}
+
+/* Customização básica do Checkbox */
+.task-checkbox {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent-success); /* Cor verde quando marcado */
+    cursor: pointer;
+}
+
+/* O texto da tarefa */
+.task-name {
+    font-size: 10.5pt;
+    color: var(--text-main);
+    user-select: none; /* Impede que o texto seja selecionado por cliques duplos */
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+/* EFEITO DE MISSÃO CONCLUÍDA
+   Quando o checkbox dentro da label estiver marcado (+),
+   o texto ao lado (.task-name) será estilizado.
+*/
+.task-checkbox:checked + .task-name {
+    color: var(--text-muted);
+    text-decoration: line-through; /* Risca o texto da tarefa */
+}
+
+/* ==========================================================================
+   COMPONENTE: POMODORO TIMER
+   ========================================================================== */
+
+/* Alinhamento central do container */
+.pomodoro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: var(--spacing-sm) 0;
+}
+
+/* O Visor Numérico Grande */
+#pomodoro-display {
+    font-size: 36pt;
+    font-weight: 700;
+    color: var(--text-main);
+    letter-spacing: 2px;
+    margin-bottom: var(--spacing-lg);
+    font-variant-numeric: tabular-nums; /* Mantém os números fixos sem tremer a tela */
+}
+
+/* Grupo de Botões */
+.pomodoro-controls {
+    display: flex;
+    gap: var(--spacing-sm);
+    width: 100%;
+}
+
+/* Estilo Base dos Botões */
+.btn-pomodoro {
+    flex: 1; /* Faz os botões dividirem o espaço igualmente */
+    background-color: var(--accent-primary);
+    color: var(--text-main);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 10pt;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-pomodoro:hover {
+    background-color: #3b31d4; /* Um tom de azul ligeiramente mais escuro */
+}
+
+/* Efeito de clique físico no botão */
+.btn-pomodoro:active {
+    transform: scale(0.98);
+}
+
+/* Botão Secundário (Pausar) */
+.btn-pomodoro.btn-secondary {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+}
+
+.btn-pomodoro.btn-secondary:hover {
+    background-color: var(--bg-card-hover);
+    color: var(--text-main);
+    border-color: var(--accent-warning); /* Borda âmbar para indicar atenção */
+}
+
+/* ==========================================================================
+   COMPONENTE: PROGRESSO DE ESTUDOS
+   ========================================================================== */
+
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.progress-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Informações acima da barra (Nome e Porcentagem) */
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10pt;
+    color: var(--text-main);
+}
+
+.progress-percentage {
+    font-weight: 600;
+    color: var(--accent-success);
+}
+
+/* O fundo cinza da barra */
+.progress-bar-bg {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    border-radius: 50px; /* Deixa a barra perfeitamente arredondada */
+    height: 10px;
+    overflow: hidden; /* Garante que o preenchimento não saia do limite arredondado */
+}
+
+/* O preenchimento da barra */
+.progress-bar-fill {
+    height: 100%;
+    border-radius: 50px;
+    transition: width 0.5s ease-in-out; /* Animação suave para quando o JS alterar o valor */
+}
+
+/* Cores customizadas por matéria para quebrar a monotonia visual */
+.fill-java { background-color: #f89820; }   /* Laranja Java clássico */
+.fill-sql { background-color: var(--accent-primary); } /* Azul para dados */
+.fill-csharp { background-color: #178600; } /* Verde C# */
+
+/* ==========================================================================
+   COMPONENTE: ATALHOS OPERACIONAIS
+   ========================================================================== */
+
+/* Uma mini grade de 2 colunas para os blocos de links */
+.shortcut-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+}
+
+/* O botão do link */
+.shortcut-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md) var(--spacing-sm);
+    text-decoration: none; /* Remove o sublinhado azul padrão de links */
+    transition: all 0.2s ease;
+}
+
+.shortcut-item:hover {
+    background-color: var(--bg-card-hover);
+    border-color: var(--accent-primary);
+    transform: translateY(-2px); /* Efeito sutil de flutuar ao passar o mouse */
+}
+
+.shortcut-icon {
+    font-size: 16pt;
+    margin-bottom: 4px;
+}
+
+.shortcut-label {
+    font-size: 9.5pt;
+    color: var(--text-main);
+    font-weight: 500;
+}

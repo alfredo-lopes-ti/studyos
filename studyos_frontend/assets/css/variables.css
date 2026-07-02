@@ -1,0 +1,32 @@
+/* ==========================================================================
+   STUDYOS - DESIGN SYSTEM & VARIABLES (VARIABLES.CSS)
+   ========================================================================== */
+
+:root {
+    /* --- PALETA DE CORES (TEMA ESCURO / OBSIDIAN & WINDOWS 11 INSPIRED) --- */
+    --bg-main: #121214;         /* Fundo principal da tela (Deep Charcoal) */
+    --bg-card: #1d1d22;         /* Fundo dos painéis/cards (Slate Gray) */
+    --bg-card-hover: #26262e;   /* Feedback visual ao passar o mouse */
+
+    /* --- CORES DE ACENTO & STATUS (DESATURADAS / CORPORATIVAS) --- */
+    --accent-primary: #4f46e5;  /* Azul Indigo Royal (Foco principal, botões, links) */
+    --accent-success: #10b981;  /* Verde Esmeralda (Tarefas concluídas, progresso) */
+    --accent-warning: #f59e0b;  /* Âmbar (Pomodoro em pausa, atenção) */
+
+    /* --- TIPOGRAFIA & TEXTO --- */
+    --text-main: #f3f4f6;       /* Texto principal (Branco acinzentado, alto contraste) */
+    --text-muted: #9ca3af;      /* Texto secundário/subtítulos (Cinza opaco) */
+
+    /* --- FRONTEIRAS & DETALHES --- */
+    --border-color: #2e2e38;    /* Divisórias discretas de cards */
+    --border-radius: 8px;       /* Cantos arredondados (Identidade Windows 11 / Modern UI) */
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+
+    /* --- SIZING & SPACING --- */
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+
+    /* --- FONT FAMILIES --- */
+    --font-sans: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+}

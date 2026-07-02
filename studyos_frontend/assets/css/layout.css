@@ -1,0 +1,75 @@
+/* ==========================================================================
+   STUDYOS - LAYOUT BASE & POSICIONAMENTO (LAYOUT.CSS)
+   ========================================================================== */
+
+/* Reset de Margens e Box-Sizing (Garante precisão nos tamanhos) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuração do Ecrã Inteiro */
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    min-height: 100vh;
+    padding: var(--spacing-lg);
+}
+
+/* Container que centraliza o sistema */
+#dashboard-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Cabeçalho do Sistema */
+#main-header {
+    margin-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: var(--spacing-md);
+}
+
+#user-greeting {
+    font-size: 20pt;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+#current-date {
+    color: var(--text-muted);
+    font-size: 11pt;
+}
+
+/* A GRADE DO DASHBOARD
+   Usamos o modelo clássico de colunas de tabelas/blocos em CSS (display: table)
+   para garantir o alinhamento impecável e robusto dos painéis.
+*/
+#dashboard-grid {
+    display: table;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: var(--spacing-md); /* Espaçamento entre os cards */
+}
+
+/* Estilização Geral e Estrutural de Cada Card */
+.card {
+    display: table-cell;
+    width: 25%; /* 4 cards = 100% da largura */
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    vertical-align: top; /* Garante que o conteúdo comece todo no topo */
+}
+
+/* Títulos internos de cada Módulo */
+.card h2 {
+    font-size: 13pt;
+    color: var(--text-main);
+    margin-bottom: var(--spacing-md);
+    font-weight: 600;
+}

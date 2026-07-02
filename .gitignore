@@ -1,0 +1,12 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+gen/
+
+# Sistema Operacional
+Thumbs.db
+.DS_Store
+
+# Arquivos de log e temporários
+*.log

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyOS - Central de Comando</title>
+    <!-- Aqui ficará o link com o CSS na próxima etapa -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<!-- Container Principal que vai segurar todo o Dashboard -->
+<div id="dashboard-container">
+
+    <!-- CABEÇALHO DO SISTEMA -->
+    <header id="main-header">
+        <h1 id="user-greeting">Bom dia, Alfredo 👋</h1>
+        <p id="current-date">02 de Julho de 2026</p>
+    </header>
+
+    <!-- GRADE DE CARDS (O PAINEL EM SI) -->
+    <main id="dashboard-grid">
+
+        <!-- CARD 1: POMODORO TIMER -->
+        <section class="card" id="card-pomodoro">
+            <h2>⏱️ Pomodoro</h2>
+
+            <div class="pomodoro-container">
+                <div id="pomodoro-display">25:00</div>
+
+                <div class="pomodoro-controls">
+                    <button id="btn-start" class="btn-pomodoro">Iniciar</button>
+                    <button id="btn-pause" class="btn-pomodoro btn-secondary">Pausar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CARD 2: CHECKLIST DIÁRIO -->
+        <section class="card" id="card-checklist">
+            <h2>📅 Missões do Dia</h2>
+
+            <div class="checklist-container">
+
+                <label class="task-item">
+                    <input type="checkbox" class="task-checkbox" value="java">
+                    <span class="task-name">☕ Estudar Java</span>
+                </label>
+
+                <label class="task-item">
+                    <input type="checkbox" class="task-checkbox" value="csharp">
+                    <span class="task-name">💙 Exercícios C#</span>
+                </label>
+
+                <label class="task-item">
+                    <input type="checkbox" class="task-checkbox" value="sql">
+                    <span class="task-name">🗄️ Modelagem SQL</span>
+                </label>
+
+                <label class="task-item">
+                    <input type="checkbox" class="task-checkbox" value="english">
+                    <span class="task-name">🇬🇧 Revisar Inglês</span>
+                </label>
+
+            </div>
+        </section>
+
+        <!-- CARD 3: PROGRESSO DAS MATÉRIAS -->
+        <section class="card" id="card-progress">
+            <h2>📈 Progresso de Estudos</h2>
+
+            <div class="progress-container">
+
+                <div class="progress-item">
+                    <div class="progress-info">
+                        <span>☕ Java (Interfaces & Exceptions)</span>
+                        <span id="pct-java" class="progress-percentage">72%</span>                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill fill-java" style="width: 72%;"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <div class="progress-info">
+                        <span>🗄️ Banco de Dados & SQL</span>
+                        <span id="pct-sql" class="progress-percentage">45%</span>                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill fill-sql" style="width: 45%;"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <div class="progress-info">
+                        <span>💙 Linguagem C#</span>
+                        <span id="pct-csharp" class="progress-percentage">30%</span>                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill fill-csharp" style="width: 30%;"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CARD 4: LINKS RÁPIDOS / ATALHOS -->
+        <section class="card" id="card-links">
+            <h2>🚀 Atalhos Operacionais</h2>
+
+            <div class="shortcut-grid">
+                <a href="https://github.com" target="_blank" class="shortcut-item">
+                    <span class="shortcut-icon">🐙</span>
+                    <span class="shortcut-label">GitHub</span>
+                </a>
+                <a href="https://chatgpt.com" target="_blank" class="shortcut-item">
+                    <span class="shortcut-icon">🤖</span>
+                    <span class="shortcut-label">ChatGPT</span>
+                </a>
+                <a href="https://obsidian.md" target="_blank" class="shortcut-item">
+                    <span class="shortcut-icon">💎</span>
+                    <span class="shortcut-label">Obsidian</span>
+                </a>
+                <a href="http://localhost:8080" target="_blank" class="shortcut-item">
+                    <span class="shortcut-icon">☕</span>
+                    <span class="shortcut-label">Local Spring</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+</div>
+<script src="js/dashboard.js" defer></script>
+<script src="js/timer.js" defer></script>
+</body>
+</html>

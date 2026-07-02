@@ -1,0 +1,36 @@
+studyos/                  # Pasta raiz do projeto (Seu repositório Git)
+│
+├── studyos-frontend/     # FASE 1: Interface Visual (HTML, CSS, JS)
+│   ├── index.html        # Painel Principal (Dashboard)
+│   ├── pages/            # Páginas secundárias (Estatísticas, Configurações)
+│   └── assets/           # Recursos estáticos da interface
+│       ├── css/
+│       │   ├── variables.css   # Cores do tema escuro e fontes
+│       │   ├── layout.css      # Grid e posicionamento dos painéis
+│       │   └── dashboard.css   # Estilo dos cards e botões
+│       ├── js/
+│       │   ├── app.js          # Inicializador e controle de telas
+│       │   ├── timer.js        # Lógica do Relógio e Pomodoro
+│       │   └── api.js          # FASE 3: Comunicação com o Backend (Fetch API)
+│       └── images/       # Ícones e logos
+│
+├── studyos-backend/      # FASE 2: Cérebro em Java (Estrutura padrão Spring Boot)
+│   ├── pom.xml           # Gerenciador de dependências (Maven)
+│   └── src/
+│       ├── main/
+│       │   ├── java/com/studyos/
+│       │   │   ├── StudyOsApplication.java  # Classe principal que roda o Spring
+│       │   │   ├── controller/ # Endpoints que o JS vai chamar (ex: TarefaController)
+│       │   │   ├── model/      # Classes Java/Entidades (ex: Tarefa, Usuario, Materia)
+│       │   │   ├── repository/ # Interfaces que comunicam com o Banco de Dados (JPA)
+│       │   │   └── exception/  # Tratamento personalizado de erros (Exceptions)
+│       │   │
+│       │   └── resources/
+│       │       └── application.properties # FASE 2: Conexão com o Banco de Dados
+│       └── test/         # Testes unitários (boas práticas de mercado)
+│
+└── studyos-database/     # FASE 2: Armazenamento (Banco de Dados)
+    ├── scripts/          # Seus arquivos .sql de criação e testes (Prática de SQL)
+    │   ├── schema.sql    # Criação das tabelas (CREATE TABLE)
+    │   └── seeds.sql     # Dados iniciais para teste (INSERT INTO)
+    └── data/             # Onde o arquivo do banco de dados vai residir (se usar SQLite/H2 local)
